@@ -1,0 +1,64 @@
+import React from "react";
+import { Box, Heading, Text, Link, Container, Flex } from "@chakra-ui/react";
+
+const Index = () => {
+  return (
+    <Flex>
+      <Box as="nav" id="navbar" width="300px" position="fixed" height="100vh" overflowY="auto" padding="10px">
+        <Heading as="header" size="md" marginBottom="1rem">
+          Documentation
+        </Heading>
+        <Link href="#Introduction" className="nav-link" display="block" marginBottom="0.5rem">
+          Introduction
+        </Link>
+        <Link href="#HTML" className="nav-link" display="block" marginBottom="0.5rem">
+          HTML
+        </Link>
+        <Link href="#CSS" className="nav-link" display="block" marginBottom="0.5rem">
+          CSS
+        </Link>
+        <Link href="#JavaScript" className="nav-link" display="block" marginBottom="0.5rem">
+          JavaScript
+        </Link>
+        <Link href="#React" className="nav-link" display="block" marginBottom="0.5rem">
+          React
+        </Link>
+      </Box>
+
+      <Container as="main" id="main-doc" marginLeft="300px" padding="20px">
+        <Box as="section" id="Introduction" className="main-section">
+          <Heading as="header">Introduction</Heading>
+          <Text as="p">This is a technical documentation page.</Text>
+          <Text as="p">You will find information about various topics here.</Text>
+          <Text as="code">Code snippet can be shown here.</Text>
+        </Box>
+
+        <Box as="section" id="HTML" className="main-section">
+          <Heading as="header">HTML</Heading>
+          <Text as="p">HTML is the standard markup language for creating Web pages.</Text>
+          <Text as="code">&lt;div&gt;Sample HTML code&lt;/div&gt;</Text>
+        </Box>
+
+        <Box as="section" id="CSS" className="main-section">
+          <Heading as="header">CSS</Heading>
+          <Text as="p">CSS is a language that describes the style of an HTML document.</Text>
+          <Text as="code">.example {`{ color: red; }`}</Text>
+        </Box>
+
+        <Box as="section" id="JavaScript" className="main-section">
+          <Heading as="header">JavaScript</Heading>
+          <Text as="p">JavaScript is a programming language commonly used in web development.</Text>
+          <Text as="code">console.log('Hello, world!');</Text>
+        </Box>
+
+        <Box as="section" id="React" className="main-section">
+          <Heading as="header">React</Heading>
+          <Text as="p">React is a JavaScript library for building user interfaces.</Text>
+          <Text as="code">{`<div>Hello, React!</div>`}</Text>
+        </Box>
+      </Container>
+    </Flex>
+  );
+};
+
+export default Index;
